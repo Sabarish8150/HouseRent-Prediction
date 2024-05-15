@@ -4,12 +4,16 @@ import pandas as pd
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split # type: ignore
 
 app = Flask(__name__)
 
 # Load and preprocess the data
-data = pd.read_csv("C:/Users/91978/project/github/HouseRent-Prediction/House_rent/Houserent.csv")
+<<<<<<< HEAD
+# data = pd.read_csv("C:/Users/91978/project/github/HouseRent-Prediction/House_rent/Houserent.csv")
+=======
+data = pd.read_csv("C:/Users/User/Documents/GitHub/HouseRent-Prediction/House_rent/Houserent.csv")
+>>>>>>> e9d9b2b7bf709696982f4c1fa0595af29946be62
 
 data["Area Type"] = data["Area Type"].map({"Super Area": 1, "Carpet Area": 2, "Built Area": 3})
 data["City"] = data["City"].map({"Mumbai": 4000, "Chennai": 6000, "Bangalore": 5600, "Hyderabad": 5000, "Delhi": 1100, "Kolkata": 7000})
